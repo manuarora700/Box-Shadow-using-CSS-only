@@ -1,0 +1,134 @@
+//IMPORT BOURBON FIRST
+@import bourbon
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800)
+
+// Colors from: http://clrs.cc/ via @mrmrs_
+$aqua:  #7FDBFF
+$blue:  #0074D9
+$navy:  #001F3F
+$teal:  #39CCCC
+$green: #2ECC40
+$olive: #3D9970
+$lime:  #01FF70
+
+$yellow:  #FFDC00
+$orange:  #FF851B
+$red:     #FF4136
+$fuchsia: #F012BE
+$purple:  #B10DC9
+$maroon:  #85144B
+
+$white:  #fff
+$silver: #ddd
+$gray:   #aaa
+$black:  #111
+
+  
+body
+  padding: 50px  
+  text-align: center
+  font-family: 'Open Sans', sans-serif
+  
+h2
+  font:
+    weight: 800
+    size: 30px
+    color: rgba(0,0,0,0.5)
+    margin-bottom: 100px
+
+hr
+  height: 0
+  background: none
+  border: 0
+  border-top: 2px solid rgba(0,0,0,0.1)
+  width: 40%
+
+  
+  
+// General Button
+a
+  display: inline-block
+  margin: 100px 0
+  text-decoration: none
+  font-size: 18px
+  color: white
+  padding: 1em 2em
+  letter-spacing: .1em
+  border-radius: 3px
+  +transition(all 300ms)
+  background: $olive
+  
+
+
+
+
+
+// Classes for all the buttons.
+
+.one:hover
+  box-shadow: 0px 0px 0px 2px white, 0px 0px 0px 4px $olive
+
+
+.two
+  background: $blue
+  
+  &:hover
+    box-shadow: 0px 0px 0px 1px $blue inset, 0px 0px 0px 2px white inset
+
+.three
+  background: $fuchsia
+  position: relative
+  top: 0px
+  left: 0px
+  
+    
+  &:hover
+    box-shadow: 2px 2px 0px white, 4px 4px 0px $fuchsia
+    top: -4px
+    left: -4px
+
+
+.four
+  background: $yellow
+  border-radius: 0
+  box-shadow: 5px 5px 0px lighten($yellow, 30%)
+  +position(relative, 0px 0 0 0px)
+  
+  &:hover
+    background: darken($yellow, 3%)
+  
+  &:active
+    top: 5px
+    left: 5px
+    box-shadow: 0px 0px 0px lighten($yellow, 30%)
+
+.five
+  background: $purple
+  position: relative
+  border-radius: 0
+    
+  &:after, &:before
+    content: ''
+    display: block
+    height: 2px
+    background: white
+    +position(absolute, 0 1% 1% 1%)
+    +transition()
+  
+  &:before
+    bottom: auto
+    top: 1%
+    
+  &:hover:after, &:hover:before
+    left: 50%
+    right: 50%
+  
+    
+.six
+  background: $aqua
+  box-shadow: 1px 1px 0px lighten($aqua, 10%), 2px 2px 0px lighten($aqua, 10%), 3px 3px 0px lighten($aqua, 10%), 4px 4px 0px lighten($aqua, 20%), 5px 5px 0px lighten($aqua, 30%), 6px 6px 0px lighten($aqua, 40%), 7px 7px 0px lighten($aqua, 50%)
+
+
+.manu
+    color:blue
